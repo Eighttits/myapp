@@ -8,8 +8,28 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'menu',
     pathMatch: 'full'
+  },
+  // {
+  //   path: 'login',
+  //   loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  // },
+  // {
+  //   path: 'componentes',
+  //   loadChildren: () => import('./pages/componentes/componentes.module').then( m => m.ComponentesPageModule)
+  // },
+  // {
+  //   path: 'camara',
+  //   loadChildren: () => import('./pages/camara/camara.module').then( m => m.CamaraPageModule)
+  // },
+  // {
+  //   path: 'contactos',
+  //   loadChildren: () => import('./pages/contactos/contactos.module').then( m => m.ContactosPageModule)
+  // },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
 ];
 

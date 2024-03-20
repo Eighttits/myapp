@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>
       Blank
     </ion-title>
@@ -14,7 +17,31 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button (click)="routerLogin()" expand="block" shape="round">
+      Ir a pagina login
+    </ion-button>
+    <ion-button (click)="routerCamera()" expand="block" shape="round">
+      Ir a pagina Camara
+    </ion-button>
+    <ion-button (click)="routerContacts()" expand="block" shape="round">
+      Ir a pagina Contactos
+    </ion-button>
+    <h3>Bienvenido {{ minombre + " " + miapellido }}</h3>
   </div>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="routerContacts()">
+        <ion-icon name="home-outline"></ion-icon>
+        Home
+      </ion-tab-button>
+      <ion-tab-button (click)="routerCamera()">
+        <ion-icon name="camera-outline"></ion-icon>
+        Camara
+      </ion-tab-button>
+      <ion-tab-button (click)="routerContacts()">
+        <ion-icon name="people-circle-outline"></ion-icon>
+        Contactos
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>

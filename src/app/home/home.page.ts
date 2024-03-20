@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  minombre = "roberto";
+  miapellido = "jauregui";
 
+  constructor(private router: Router) {}
+
+  routerLogin() {
+    this.router.navigate(["/menu/login"]);
+  }
+  routerCamera() {
+    this.router.navigate(["/menu/camara"]);
+  }
+  routerContacts() {
+    this.router.navigate(["/menu/contactos"]);
+  }
 }
