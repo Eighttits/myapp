@@ -26,6 +26,12 @@ export class MenuPage implements OnInit {
       name: 'menu/camara',
       url: '/menu/camara',
       icon: 'camera-outline'
+    },
+    {
+      title: 'Iniciar sesion',
+      name: 'menu/login',
+      url: '/menu/login',
+      icon: 'camera-outline'
     }
   ]
 

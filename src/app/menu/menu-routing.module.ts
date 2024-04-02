@@ -33,6 +33,10 @@ const routes: Routes = [
         path: 'contactos',
         loadChildren: () => import('../pages/contactos/contactos.module').then( m => m.ContactosPageModule)
       },
+      {
+        path: 'casa',
+        loadChildren: () => import('../pages/casa/casa.module').then( m => m.CasaPageModule)
+      },
         ],
       }
     ];
